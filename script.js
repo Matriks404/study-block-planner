@@ -203,8 +203,8 @@ function renderCalendar() {
 
 				slot.style.backgroundColor = catInfo.color;
 				slot.innerHTML = `
-					<div class="block-category">${catInfo.name} ${effective.type === 'inherited' ? '🔄' : ''}</div>
-					<div style="font-weight:600;">${effective.name}</div>
+					<div class="block-category">${catInfo.name}</div>
+					<div style="font-weight:600;">${effective.name} ${effective.type === 'inherited' ? '🔄' : ''}</div>
 					<div class="progress-container">
 						<div class="progress-fill" style="width: ${totalPercent}%"></div>
 					</div>
