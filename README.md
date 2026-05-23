@@ -5,4 +5,4 @@ The entire project was vibe-coded from scratch using **Gemini**. So that said, i
 I don't want any new features suggestions aside from stuff that seem absolutely necessary from productivity perspective. If you disagree, fork the project.
 
 # Screenshot
-<img src="https://user-images.githubusercontent.com/link-to-your-image.png" width="500" />
+<img src="https://raw.githubusercontent.com/Matriks404/study-block-planner/refs/heads/master/screenshot.png" width="800" />
