@@ -165,7 +165,7 @@
         </div>
 
         <div style="margin-top: 2rem; border-top: 2px solid var(--border-color); padding-top: 1rem;">
-            <h3>Resources & Progress Trackers</h3>
+            <h3>Resources</h3>
             <div id="resourcesList"></div>
 
             <div class="resource-card" style="background: #f0fdf4; border-color: #bbf7d0;">
@@ -181,6 +181,7 @@
                             <option value="book">📚 Book</option>
                             <option value="video">🎥 Video</option>
                             <option value="course">🎓 Course</option>
+                            <option value="site">🌐 Website</option>
                         </select>
                     </div>
                 </div>
@@ -582,7 +583,9 @@
         if (type === 'book') {
             currentLbl.textContent = "Current Page"; totalLbl.textContent = "Total Pages";
         } else if (type === 'video') {
-            currentLbl.textContent = "Current Time (Min)"; totalLbl.textContent = "Total Length (Min)";
+            currentLbl.textContent = "Current Time (Minutes)"; totalLbl.textContent = "Total Length (Minutes)";
+        } else if (type === 'site') {
+            currentLbl.textContent = "Current Chapters"; totalLbl.textContent = "Total Chapters";
         } else {
             currentLbl.textContent = "Lessons Complete"; totalLbl.textContent = "Total Lessons";
         }
@@ -598,8 +601,8 @@
         resources.forEach((res, idx) => {
             const card = document.createElement('div');
             card.className = 'resource-card';
-            let typeIcon = res.type === 'book' ? '📚' : res.type === 'video' ? '🎥' : '🎓';
-            let unitLabel = res.type === 'book' ? 'pages' : res.type === 'video' ? 'mins' : 'lessons';
+            let typeIcon = res.type === 'book' ? '📚' : res.type === 'video' ? '🎥' : res.type === 'site' ? '🌐' : '🎓';
+            let unitLabel = res.type === 'book' ? 'pages' : res.type === 'video' ? 'mins' : res.type === 'site' ? 'chapters' : 'lessons';
 
             const current = Number(res.current) || 0;
             const total = Number(res.total) || 1;
